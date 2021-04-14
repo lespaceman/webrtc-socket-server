@@ -6,9 +6,9 @@ const socket = require('socket.io');
 
 const users = {};
 
-const privateKey = fs.readFileSync('./socket-server.revlity.com/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('./socket-server.revlity.com/cert.pem', 'utf8');
-const ca = fs.readFileSync('./socket-server.revlity.com/chain.pem', 'utf8');
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/socket-server.revlity.com/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/socket-server.revlity.com/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/socket-server.revlity.com/chain.pem', 'utf8');
 
 const credentials = {
 	key: privateKey,
